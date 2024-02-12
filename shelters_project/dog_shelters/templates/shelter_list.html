@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Lista de abrigos
+{% endblock %}
+
+{% block content %}
+<h2>Lista de abrigos</h2>
+<div>Aqui está a lista de abrigos registrados</div>
+    {% for shelter in shelters %}
+        <div>
+            <a href="{% url 'shelter_detail' shelter.id %}">
+                {{shelter.name}}
+            </a>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}
