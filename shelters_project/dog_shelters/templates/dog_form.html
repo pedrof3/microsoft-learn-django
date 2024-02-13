@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{# TODO: Register crispy_forms_tags #}
+
+{% block title %}
+Registrar cachorro no abrigo
+{% endblock %}
+
+{% block content %}
+<h2>Registrar cachorro no abrigo</h2>
+<form method="POST">
+    {% csrf_token %}
+
+    {{ form.as_p }}
+
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
+{% endblock %}

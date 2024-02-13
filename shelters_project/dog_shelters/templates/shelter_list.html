@@ -13,6 +13,10 @@ Lista de abrigos
                 {{shelter.name}}
             </a>
         </div>
+        
     {% endfor %}
+    <div>
+        <a href="{% url 'dog_register' %}">Registrar um cão disponível</a>
+    </div>
 </div>
 {% endblock %}
